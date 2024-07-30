@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using ShopProjectMVC.Core.Interfaces;
 using ShopProjectMVC.Core.Models;
 
@@ -12,10 +13,12 @@ namespace ShopProjectMVC.Controllers
         {
             _productService = productService;
         }
-
-        public IActionResult Products()
+        public async Task<IActionResult> Products()
         {
-            var products = _productService.GetAll();
+            if (HttpContext.Session.GetString("user") == null) { 
+                return RedirectToAction("Login","User");
+            }
+            var products = await _productService.GetAll().AsQueryable().ToListAsync();
             return View(products);
         }
 

@@ -514,3 +514,4 @@ C:\Den\IT\ASP.NET\ShopProjectMVC_GIT\ShopProjectMVC\obj\Debug\net8.0\refint\Shop
 C:\Den\IT\ASP.NET\ShopProjectMVC_GIT\ShopProjectMVC\obj\Debug\net8.0\ShopProjectMVC.pdb
 C:\Den\IT\ASP.NET\ShopProjectMVC_GIT\ShopProjectMVC\obj\Debug\net8.0\ShopProjectMVC.genruntimeconfig.cache
 C:\Den\IT\ASP.NET\ShopProjectMVC_GIT\ShopProjectMVC\obj\Debug\net8.0\ref\ShopProjectMVC.dll
+C:\Den\IT\ASP.NET\ShopProjectMVC_GIT\ShopProjectMVC\obj\Debug\net8.0\ShopProjectMVC.sourcelink.json

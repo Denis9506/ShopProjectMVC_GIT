@@ -25,7 +25,12 @@
                 <td>@(order.Product?.Name ?? "Unknown")</td>
                 <td>@(order.Product?.Price ?? 0.00)</td>
                 <td>@order.CreatedAt.ToString("yyyy-MM-dd HH:mm")</td>
-                </tr>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@order.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@order.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@order.Id">Delete</a>
+                </td>    
+            </tr>
             }
         </tbody>
     </table>

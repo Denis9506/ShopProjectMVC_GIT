@@ -25,6 +25,11 @@ namespace ShopProjectMVC.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(User user) {
             var userDb = await _userService.Login(user.Email, user.Password);
+            if (userDb == null) {
+                return NotFound();
+            }
+            HttpContext.Session.SetString("user", userDb.Name);
+            HttpContext.Session.SetInt32("role", (int)userDb.Role);
             return RedirectToAction("Index","Home");
         }
 
