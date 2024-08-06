@@ -40,19 +40,19 @@ namespace ShopProjectMVC.Services
         public async Task<Order> BuyProduct(int userId, int productId)
         {
             var product = await _repository.GetById<Product>(productId);
+            var user = await _repository.GetById<User>(userId);
+
             if (product == null)
             {
                 throw new Exception("Product does not exist.");
             }
-            if (product.Count == 0)
+            if (product.Count <= 0)
             {
                 throw new Exception("Product out of stock.");
             }
 
             product.Count -= 1;
             await _repository.Update(product);
-
-            var user = await _repository.GetById<User>(userId);
             if (user == null)
             {
                 throw new Exception("User not found.");
@@ -67,6 +67,9 @@ namespace ShopProjectMVC.Services
 
             return await _repository.Add(order);
         }
-
+        public IEnumerable<Category> GetAllCategories()
+        {
+            return _repository.GetAll<Category>();
+        }
     }
 }

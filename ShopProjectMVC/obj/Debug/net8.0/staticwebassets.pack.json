@@ -245,6 +245,58 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "C:\\Den\\IT\\ASP.NET\\ShopProjectMVC_GIT\\ShopProjectMVC\\wwwroot\\pictures\\10a93639c-671c-488b-9d4d-e5681ee18363.png",
+      "PackagePath": "staticwebassets\\pictures\\10a93639c-671c-488b-9d4d-e5681ee18363.png"
+    },
+    {
+      "Id": "C:\\Den\\IT\\ASP.NET\\ShopProjectMVC_GIT\\ShopProjectMVC\\wwwroot\\pictures\\16198a644-c5d7-4118-8e85-bff78bcfdd98.png",
+      "PackagePath": "staticwebassets\\pictures\\16198a644-c5d7-4118-8e85-bff78bcfdd98.png"
+    },
+    {
+      "Id": "C:\\Den\\IT\\ASP.NET\\ShopProjectMVC_GIT\\ShopProjectMVC\\wwwroot\\pictures\\1a4378e8d-27a4-4417-97e0-69513091fca2.png",
+      "PackagePath": "staticwebassets\\pictures\\1a4378e8d-27a4-4417-97e0-69513091fca2.png"
+    },
+    {
+      "Id": "C:\\Den\\IT\\ASP.NET\\ShopProjectMVC_GIT\\ShopProjectMVC\\wwwroot\\pictures\\bggfaeeb1e4-a290-4e53-abea-924ec6a933cd.jpg",
+      "PackagePath": "staticwebassets\\pictures\\bggfaeeb1e4-a290-4e53-abea-924ec6a933cd.jpg"
+    },
+    {
+      "Id": "C:\\Den\\IT\\ASP.NET\\ShopProjectMVC_GIT\\ShopProjectMVC\\wwwroot\\pictures\\Снимок экрана 2024-06-10 213430104fa41e-74a1-43e2-9bda-afd459064cad.png",
+      "PackagePath": "staticwebassets\\pictures\\Снимок экрана 2024-06-10 213430104fa41e-74a1-43e2-9bda-afd459064cad.png"
+    },
+    {
+      "Id": "C:\\Den\\IT\\ASP.NET\\ShopProjectMVC_GIT\\ShopProjectMVC\\wwwroot\\pictures\\Снимок экрана 2024-06-10 21343018baab39-e118-4759-96f2-a1f647cc1632.png",
+      "PackagePath": "staticwebassets\\pictures\\Снимок экрана 2024-06-10 21343018baab39-e118-4759-96f2-a1f647cc1632.png"
+    },
+    {
+      "Id": "C:\\Den\\IT\\ASP.NET\\ShopProjectMVC_GIT\\ShopProjectMVC\\wwwroot\\pictures\\Снимок экрана 2024-06-10 2134302c786f83-6f7f-4835-bda3-b407d10fcc7b.png",
+      "PackagePath": "staticwebassets\\pictures\\Снимок экрана 2024-06-10 2134302c786f83-6f7f-4835-bda3-b407d10fcc7b.png"
+    },
+    {
+      "Id": "C:\\Den\\IT\\ASP.NET\\ShopProjectMVC_GIT\\ShopProjectMVC\\wwwroot\\pictures\\Снимок экрана 2024-06-10 21343034f0d7a0-eb0b-471c-91b2-9b8c83a4e92b.png",
+      "PackagePath": "staticwebassets\\pictures\\Снимок экрана 2024-06-10 21343034f0d7a0-eb0b-471c-91b2-9b8c83a4e92b.png"
+    },
+    {
+      "Id": "C:\\Den\\IT\\ASP.NET\\ShopProjectMVC_GIT\\ShopProjectMVC\\wwwroot\\pictures\\Снимок экрана 2024-06-10 2134307d8e7406-f1af-40ae-8cfd-c6f6f7353c58.png",
+      "PackagePath": "staticwebassets\\pictures\\Снимок экрана 2024-06-10 2134307d8e7406-f1af-40ae-8cfd-c6f6f7353c58.png"
+    },
+    {
+      "Id": "C:\\Den\\IT\\ASP.NET\\ShopProjectMVC_GIT\\ShopProjectMVC\\wwwroot\\pictures\\Снимок экрана 2024-06-10 21343092b4cb70-b4bc-4e0e-8928-563fecee4670.png",
+      "PackagePath": "staticwebassets\\pictures\\Снимок экрана 2024-06-10 21343092b4cb70-b4bc-4e0e-8928-563fecee4670.png"
+    },
+    {
+      "Id": "C:\\Den\\IT\\ASP.NET\\ShopProjectMVC_GIT\\ShopProjectMVC\\wwwroot\\pictures\\Снимок экрана 2024-06-10 213430d3504b00-8ff4-462a-adb9-15aaae77a417.png",
+      "PackagePath": "staticwebassets\\pictures\\Снимок экрана 2024-06-10 213430d3504b00-8ff4-462a-adb9-15aaae77a417.png"
+    },
+    {
+      "Id": "C:\\Den\\IT\\ASP.NET\\ShopProjectMVC_GIT\\ShopProjectMVC\\wwwroot\\pictures\\Снимок экрана 2024-06-10 213430e261254c-1b6d-4d4b-94c4-b82a41b72d6f.png",
+      "PackagePath": "staticwebassets\\pictures\\Снимок экрана 2024-06-10 213430e261254c-1b6d-4d4b-94c4-b82a41b72d6f.png"
+    },
+    {
+      "Id": "C:\\Den\\IT\\ASP.NET\\ShopProjectMVC_GIT\\ShopProjectMVC\\wwwroot\\pictures\\Снимок экрана 2024-06-10 213430ef91b68d-053c-4b71-86e6-7634e7d90720.png",
+      "PackagePath": "staticwebassets\\pictures\\Снимок экрана 2024-06-10 213430ef91b68d-053c-4b71-86e6-7634e7d90720.png"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ShopProjectMVC.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

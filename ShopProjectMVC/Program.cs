@@ -18,7 +18,6 @@ builder.Services.AddTransient<IUserService, UserService>();
 
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddDistributedMemoryCache();
-
 builder.Services.AddSession(options =>
 {
     options.IdleTimeout = TimeSpan.FromSeconds((int)builder.Configuration.GetValue(typeof(int),"SessionTimeout"));

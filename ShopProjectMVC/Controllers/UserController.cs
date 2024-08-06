@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ShopProjectMVC.Core.Interfaces;
 using ShopProjectMVC.Core.Models;
+using ShopProjectMVC.Filters;
 
 namespace ShopProjectMVC.Controllers
 {
@@ -30,6 +31,7 @@ namespace ShopProjectMVC.Controllers
             }
             HttpContext.Session.SetString("user", userDb.Name);
             HttpContext.Session.SetInt32("role", (int)userDb.Role);
+            HttpContext.Session.SetInt32("userId", (int)userDb.Id);
             return RedirectToAction("Index","Home");
         }
 
@@ -39,6 +41,15 @@ namespace ShopProjectMVC.Controllers
             user.CreatedAt = DateTime.UtcNow;
             await _userService.Register(user);
             return RedirectToAction("Index", "Home");
+        }
+
+
+        [AuthorizeFilter]
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Clear();
+
+            return RedirectToAction("Login", "User");
         }
     }
 }

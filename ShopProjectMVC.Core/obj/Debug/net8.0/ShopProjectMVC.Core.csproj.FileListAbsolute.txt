@@ -22,3 +22,4 @@ C:\Den\IT\ASP.NET\ShopProjectMVC_GIT\ShopProjectMVC.Core\obj\Debug\net8.0\ShopPr
 C:\Den\IT\ASP.NET\ShopProjectMVC_GIT\ShopProjectMVC.Core\obj\Debug\net8.0\refint\ShopProjectMVC.Core.dll
 C:\Den\IT\ASP.NET\ShopProjectMVC_GIT\ShopProjectMVC.Core\obj\Debug\net8.0\ShopProjectMVC.Core.pdb
 C:\Den\IT\ASP.NET\ShopProjectMVC_GIT\ShopProjectMVC.Core\obj\Debug\net8.0\ref\ShopProjectMVC.Core.dll
+C:\Den\IT\ASP.NET\ShopProjectMVC_GIT\ShopProjectMVC.Core\obj\Debug\net8.0\ShopProjectMVC.Core.sourcelink.json

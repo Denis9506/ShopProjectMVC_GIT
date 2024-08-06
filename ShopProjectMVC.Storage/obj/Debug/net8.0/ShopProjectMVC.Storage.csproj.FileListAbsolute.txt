@@ -32,3 +32,4 @@ C:\Den\IT\ASP.NET\ShopProjectMVC_GIT\ShopProjectMVC.Storage\obj\Debug\net8.0\ref
 C:\Den\IT\ASP.NET\ShopProjectMVC_GIT\ShopProjectMVC.Storage\obj\Debug\net8.0\ShopProjectMVC.Storage.pdb
 C:\Den\IT\ASP.NET\ShopProjectMVC_GIT\ShopProjectMVC.Storage\obj\Debug\net8.0\ShopProjectMVC.Storage.genruntimeconfig.cache
 C:\Den\IT\ASP.NET\ShopProjectMVC_GIT\ShopProjectMVC.Storage\obj\Debug\net8.0\ref\ShopProjectMVC.Storage.dll
+C:\Den\IT\ASP.NET\ShopProjectMVC_GIT\ShopProjectMVC.Storage\obj\Debug\net8.0\ShopProjectMVC.Storage.sourcelink.json

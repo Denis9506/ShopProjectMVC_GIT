@@ -1,5 +1,6 @@
 ﻿@model IEnumerable<ShopProjectMVC.Core.Models.Product>
 @inject IHttpContextAccessor accessor
+@* @inject IWebHostEnvironment env *@
 @{
     ViewData["Title"] = "Products";
 }
@@ -9,7 +10,7 @@
 
     @if (accessor.HttpContext.Session.GetInt32("role") == 1)
     {
-        <a class="btn btn-success">Add new product</a>
+    <a class="btn btn-success" asp-action="Create">Add product</a>
         <br />
         
         <table>
@@ -32,8 +33,8 @@
                     <td>@product.Price</td>
                     <td>
                         <div>
-                                <a>Edit</a>
-                                <a>Delete</a>
+                            <a asp-action="Edit" asp-route-id="@product.Id">Eidt</a>
+                            <a asp-action="Delete" asp-route-id="@product.Id">Delete</a>
                         </div>
                     </td>
                     </tr>
@@ -48,7 +49,7 @@
         @foreach (var product in Model)
         {
             <div class="product-card">
-                <img src="@product.Image" alt="@product.Name" class="product-image" />
+                <img src="@(System.IO.Path.Combine("pictures", product.Image))" alt="@product.Name" class="product-image" />
                 <h3>@product.Name</h3>
                 <p>@product.Description</p>
                 <div class="product-info">

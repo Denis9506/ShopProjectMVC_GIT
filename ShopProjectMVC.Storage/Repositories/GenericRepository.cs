@@ -26,26 +26,26 @@ namespace ShopProjectMVC.Storage.Repositories
             var entity = await _context.Set<T>().FindAsync(id);
             if (entity != null)
             {
-                _context.Set<T>().Remove(entity);
+                _context.Remove(entity);
                 await _context.SaveChangesAsync();
             }
         }
 
         public IQueryable<T> GetAll<T>() where T : class
         {
-            return _context.Set<T>().AsQueryable();
+            return _context.Set<T>();
         }
 
         public async Task<T> GetById<T>(int id) where T : class
         {
-            return await _context.Set<T>().FindAsync(id);
+            return await _context.Set<T>().FindAsync(id).AsTask();
         }
 
         public async Task<T> Update<T>(T entity) where T : class
         {
-            _context.Entry(entity).State = EntityState.Modified;
+            var newEntity = _context.Update(entity);
             await _context.SaveChangesAsync();
-            return entity;
+            return newEntity.Entity;
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ShopProjectMVC.Core.Interfaces;
 using ShopProjectMVC.Core.Models;
+using ShopProjectMVC.Filters;
 
 namespace ShopProjectMVC.Controllers
 {
@@ -13,10 +14,11 @@ namespace ShopProjectMVC.Controllers
             _orderService = orderService;
         }
 
+        [AuthorizeFilter]
         public IActionResult Orders()
         {
-            int userId = 1; 
-            IEnumerable<Order> orders = _orderService.GetOrders(userId).ToList();
+            int id = HttpContext.Session.GetInt32("userId").Value;
+            IEnumerable<Order> orders = _orderService.GetOrders(id).ToList();
             return View(orders);
         }
     }
