@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ShopProjectMVC.Storage")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+685e75bae16dca36bb2ae13010073dfae8fc6c8e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e2a25574067daed49b396528629567a2bf3b05f9")]
 [assembly: System.Reflection.AssemblyProductAttribute("ShopProjectMVC.Storage")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ShopProjectMVC.Storage")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

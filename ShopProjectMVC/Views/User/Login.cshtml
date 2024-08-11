@@ -1,19 +1,29 @@
 ﻿@model ShopProjectMVC.Core.Models.User
 
-<h1> Login </h1>
-<form asp-action="Login" method="post">
-	<label>Email:</label>
-	<input type = "email" asp-for="Email"/>
-	<br />
-	<br />
-	<label>Password:</label>
-	<input type="password" asp-for="Password"/>
-	<br />
-	<br />
-	<input type="submit" class="btn btn-primary"/>
+<h1 class="text-center">Login</h1>
+<form asp-action="Login" method="post" class="w-50 mx-auto mt-4">
+    <div class="form-group mb-3">
+        <label for="email">Email:</label>
+        <input type="email" asp-for="Email" class="form-control" id="email" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div class="form-group mb-3">
+        <label for="password">Password:</label>
+        <input type="password" asp-for="Password" class="form-control" id="password" />
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+    <div class="d-grid gap-2">
+        <input type="submit" class="btn btn-primary" value="Login" />
+    </div>
 
+    @if (ViewBag.ErrorMessage != null)
+    {
+        <div class="text-danger text-center mt-3">
+            @ViewBag.ErrorMessage
+        </div>
+    }
 </form>
 
-<div>
-	<a asp-action="Register">Register</a>
+<div class="text-center mt-3">
+    <a asp-action="Register">Register</a>
 </div>

@@ -3,24 +3,12 @@
   "WorkspaceRootPath": "C:\\Den\\IT\\ASP.NET\\ShopProjectMVC_GIT\\ShopProjectMVC\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5978ED08-CC4C-4532-9BD0-D6C9D1181B6B}|ShopProjectMVC.csproj|c:\\den\\it\\asp.net\\shopprojectmvc_git\\shopprojectmvc\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5978ED08-CC4C-4532-9BD0-D6C9D1181B6B}|ShopProjectMVC.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5978ED08-CC4C-4532-9BD0-D6C9D1181B6B}|ShopProjectMVC.csproj|c:\\den\\it\\asp.net\\shopprojectmvc_git\\shopprojectmvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5978ED08-CC4C-4532-9BD0-D6C9D1181B6B}|ShopProjectMVC.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{5978ED08-CC4C-4532-9BD0-D6C9D1181B6B}|ShopProjectMVC.csproj|c:\\den\\it\\asp.net\\shopprojectmvc_git\\shopprojectmvc\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5978ED08-CC4C-4532-9BD0-D6C9D1181B6B}|ShopProjectMVC.csproj|solutionrelative:controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5978ED08-CC4C-4532-9BD0-D6C9D1181B6B}|ShopProjectMVC.csproj|c:\\den\\it\\asp.net\\shopprojectmvc_git\\shopprojectmvc\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5978ED08-CC4C-4532-9BD0-D6C9D1181B6B}|ShopProjectMVC.csproj|solutionrelative:controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5978ED08-CC4C-4532-9BD0-D6C9D1181B6B}|ShopProjectMVC.csproj|c:\\den\\it\\asp.net\\shopprojectmvc_git\\shopprojectmvc\\filters\\authorizefilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5978ED08-CC4C-4532-9BD0-D6C9D1181B6B}|ShopProjectMVC.csproj|solutionrelative:filters\\authorizefilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5978ED08-CC4C-4532-9BD0-D6C9D1181B6B}|ShopProjectMVC.csproj|c:\\den\\it\\asp.net\\shopprojectmvc_git\\shopprojectmvc\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5978ED08-CC4C-4532-9BD0-D6C9D1181B6B}|ShopProjectMVC.csproj|solutionrelative:controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -33,72 +21,33 @@
           "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Den\\IT\\ASP.NET\\ShopProjectMVC_GIT\\ShopProjectMVC\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Den\\IT\\ASP.NET\\ShopProjectMVC_GIT\\ShopProjectMVC\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAACAAAABaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-06T12:57:28.952Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Den\\IT\\ASP.NET\\ShopProjectMVC_GIT\\ShopProjectMVC\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
-              "ToolTip": "C:\\Den\\IT\\ASP.NET\\ShopProjectMVC_GIT\\ShopProjectMVC\\Controllers\\UserController.cs",
-              "RelativeToolTip": "Controllers\\UserController.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAYwDMAAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-06T12:57:17.657Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "OrderController.cs",
-              "DocumentMoniker": "C:\\Den\\IT\\ASP.NET\\ShopProjectMVC_GIT\\ShopProjectMVC\\Controllers\\OrderController.cs",
-              "RelativeDocumentMoniker": "Controllers\\OrderController.cs",
-              "ToolTip": "C:\\Den\\IT\\ASP.NET\\ShopProjectMVC_GIT\\ShopProjectMVC\\Controllers\\OrderController.cs",
-              "RelativeToolTip": "Controllers\\OrderController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-06T12:47:07.771Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ProductController.cs",
-              "DocumentMoniker": "C:\\Den\\IT\\ASP.NET\\ShopProjectMVC_GIT\\ShopProjectMVC\\Controllers\\ProductController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ProductController.cs",
-              "ToolTip": "C:\\Den\\IT\\ASP.NET\\ShopProjectMVC_GIT\\ShopProjectMVC\\Controllers\\ProductController.cs",
-              "RelativeToolTip": "Controllers\\ProductController.cs",
-              "ViewState": "AQIAAGsAAAAAAAAAAADwv2oAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-06T12:45:31.762Z",
-              "EditorCaption": ""
-            },
-            {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AuthorizeFilter.cs",
-              "DocumentMoniker": "C:\\Den\\IT\\ASP.NET\\ShopProjectMVC_GIT\\ShopProjectMVC\\Filters\\AuthorizeFilter.cs",
-              "RelativeDocumentMoniker": "Filters\\AuthorizeFilter.cs",
-              "ToolTip": "C:\\Den\\IT\\ASP.NET\\ShopProjectMVC_GIT\\ShopProjectMVC\\Filters\\AuthorizeFilter.cs",
-              "RelativeToolTip": "Filters\\AuthorizeFilter.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABIAAAA",
+              "DocumentIndex": 0,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Den\\IT\\ASP.NET\\ShopProjectMVC_GIT\\ShopProjectMVC\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Den\\IT\\ASP.NET\\ShopProjectMVC_GIT\\ShopProjectMVC\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "Controllers\\ProductController.cs",
+              "ViewState": "AQIAACwAAAAAAAAAAAAgwDYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-06T12:44:21.602Z",
+              "WhenOpened": "2024-08-11T21:25:21.597Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "C:\\Den\\IT\\ASP.NET\\ShopProjectMVC_GIT\\ShopProjectMVC\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "Controllers\\OrderController.cs",
+              "ToolTip": "C:\\Den\\IT\\ASP.NET\\ShopProjectMVC_GIT\\ShopProjectMVC\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "Controllers\\OrderController.cs",
+              "ViewState": "AQIAADIAAAAAAAAAAAAgwBwAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-11T21:18:42.883Z",
               "EditorCaption": ""
             }
           ]

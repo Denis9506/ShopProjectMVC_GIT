@@ -6,5 +6,7 @@ namespace ShopProjectMVC.Core.Interfaces
     {
         IEnumerable<Order> GetOrders(int userId);
         IEnumerable<Order> GetOrders(int userId, int offset, int size);
+        Task DeleteOrder(int id);
     }
+
 }

@@ -3,6 +3,12 @@ using Microsoft.EntityFrameworkCore;
 using ShopProjectMVC.Core.Interfaces;
 using ShopProjectMVC.Core.Models;
 using ShopProjectMVC.Filters;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
+using System;
+using System.IO;
+using System.Threading.Tasks;
+using System.Linq;
 
 namespace ShopProjectMVC.Controllers
 {
@@ -17,19 +23,34 @@ namespace ShopProjectMVC.Controllers
             _environment = webHost;
         }
 
-
         [AuthorizeFilter]
         public async Task<IActionResult> Products()
         {
-            var products = await _productService.GetAll().AsQueryable().ToListAsync();
-            return View(products);
+            try
+            {
+                var products = await _productService.GetAll().AsQueryable().ToListAsync();
+                return View(products);
+            }
+            catch (Exception ex)
+            {
+                ViewBag.ErrorMessage = ex.Message;
+                return View("Error");
+            }
         }
 
-        [AuthorizeFilter]
+        [AuthorizeFilter(1)]
         public IActionResult Create()
         {
-            ViewBag.Categories = _productService.GetAllCategories().ToList();
-            return View();
+            try
+            {
+                ViewBag.Categories = _productService.GetAllCategories().ToList();
+                return View();
+            }
+            catch (Exception ex)
+            {
+                ViewBag.ErrorMessage = ex.Message;
+                return View("Error");
+            }
         }
 
         [AuthorizeFilter]
@@ -40,7 +61,6 @@ namespace ShopProjectMVC.Controllers
             {
                 int id = HttpContext.Session.GetInt32("userId").Value;
                 var order = await _productService.BuyProduct(id, productId);
-
                 return RedirectToAction("Orders", "Order");
             }
             catch (Exception ex)
@@ -50,94 +70,133 @@ namespace ShopProjectMVC.Controllers
             }
         }
 
-
-        [AuthorizeFilter]
+        [AuthorizeFilter(1)]
         [HttpPost]
-        public async Task<IActionResult> Create(Product product, int category, IFormFile file)
+        public async Task<IActionResult> Create(Product product, int category, IFormFile? file = null)
         {
-            string hash = Guid.NewGuid().ToString();
-            string name = Path.GetFileNameWithoutExtension(file.FileName) + hash + Path.GetExtension(file.FileName);
-            string path = Path.Combine(_environment.WebRootPath, "pictures", name);
-            using var fileStream = new MemoryStream();
+            try
             {
-                file.CopyTo(fileStream);
-                await System.IO.File.WriteAllBytesAsync(path, fileStream.ToArray());
+                if (file != null)
+                {
+                    string hash = Guid.NewGuid().ToString();
+                    string name = Path.GetFileNameWithoutExtension(file.FileName) + hash + Path.GetExtension(file.FileName);
+                    string path = Path.Combine(_environment.WebRootPath, "pictures", name);
+                    using var fileStream = new MemoryStream();
+                    {
+                        file.CopyTo(fileStream);
+                        await System.IO.File.WriteAllBytesAsync(path, fileStream.ToArray());
+                    }
+                    product.Image = name;
+                }
+                product.Category = _productService.GetAllCategories().First(x => x.Id == category);
+                await _productService.AddProduct(product);
+                return RedirectToAction("Products");
             }
-            product.Image = name;
-            product.Category = _productService.GetAllCategories().First(x => x.Id == category);
-            await _productService.AddProduct(product);
-            return RedirectToAction("Products");
+            catch (Exception ex)
+            {
+                ViewBag.ErrorMessage = ex.Message;
+                return View("Error");
+            }
         }
 
-
-        [AuthorizeFilter]
+        [AuthorizeFilter(1)]
         public async Task<IActionResult> Delete(int id)
         {
-            var product = await _productService.GetProductById(id);
-            return View(product);
+            try
+            {
+                var product = await _productService.GetProductById(id);
+                return View(product);
+            }
+            catch (Exception ex)
+            {
+                ViewBag.ErrorMessage = ex.Message;
+                return View("Error");
+            }
         }
 
-
-        [AuthorizeFilter]
+        [AuthorizeFilter(1)]
         [HttpPost]
         [ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteProduct(int id)
         {
-            var product = await _productService.GetProductById(id);
-            string path = Path.Combine(_environment.WebRootPath, "pictures", product.Image);
-            await _productService.DeleteProduct(id);
-            System.IO.File.Delete(path);
-            return RedirectToAction("Products");
+            try
+            {
+                var product = await _productService.GetProductById(id);
+                string path = Path.Combine(_environment.WebRootPath, "pictures", product.Image);
+                await _productService.DeleteProduct(id);
+                System.IO.File.Delete(path);
+                return RedirectToAction("Products");
+            }
+            catch (Exception ex)
+            {
+                ViewBag.ErrorMessage = ex.Message;
+                return View("Error");
+            }
         }
 
-        [AuthorizeFilter]
+        [AuthorizeFilter(1)]
         public async Task<IActionResult> Edit(int id)
         {
-            var product = await _productService.GetProductById(id);
-            if (product == null)
+            try
             {
-                return NotFound();
+                var product = await _productService.GetProductById(id);
+                if (product == null)
+                {
+                    return NotFound();
+                }
+                ViewBag.Categories = _productService.GetAllCategories().ToList();
+                return View(product);
             }
-
-            ViewBag.Categories = _productService.GetAllCategories().ToList();
-            return View(product);
+            catch (Exception ex)
+            {
+                ViewBag.ErrorMessage = ex.Message;
+                return View("Error");
+            }
         }
 
-        [AuthorizeFilter]
+        [AuthorizeFilter(1)]
         [HttpPost]
         [ActionName("Edit")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(Product product, Category category, IFormFile file)
+        public async Task<IActionResult> Edit(Product product, Category category, IFormFile? file = null)
         {
-            if (file != null)
+            try
             {
-                string hash = Guid.NewGuid().ToString();
-                string name = Path.GetFileNameWithoutExtension(file.FileName) + hash + Path.GetExtension(file.FileName);
-                string path = Path.Combine(_environment.WebRootPath, "pictures", name);
-
-                using var fileStream = new MemoryStream();
+                if (file != null)
                 {
-                    file.CopyTo(fileStream);
-                    await System.IO.File.WriteAllBytesAsync(path, fileStream.ToArray());
-                }
+                    string hash = Guid.NewGuid().ToString();
+                    string name = Path.GetFileNameWithoutExtension(file.FileName) + hash + Path.GetExtension(file.FileName);
+                    string path = Path.Combine(_environment.WebRootPath, "pictures", name);
 
-                if (!string.IsNullOrEmpty(product.Image))
-                {
-                    string oldImagePath = Path.Combine(_environment.WebRootPath, "pictures", product.Image);
-                    if (System.IO.File.Exists(oldImagePath))
+                    using var fileStream = new MemoryStream();
                     {
-                        System.IO.File.Delete(oldImagePath);
+                        file.CopyTo(fileStream);
+                        await System.IO.File.WriteAllBytesAsync(path, fileStream.ToArray());
                     }
+
+                    if (!string.IsNullOrEmpty(product.Image))
+                    {
+                        string oldImagePath = Path.Combine(_environment.WebRootPath, "pictures", product.Image);
+                        if (System.IO.File.Exists(oldImagePath))
+                        {
+                            System.IO.File.Delete(oldImagePath);
+                        }
+                    }
+
+                    product.Image = name;
                 }
 
-                product.Image = name;
+                product.Category = _productService.GetAllCategories().First(x => x.Id == category.Id);
+
+                await _productService.UpdateProduct(product);
+                return RedirectToAction("Products");
             }
-
-            product.Category = _productService.GetAllCategories().First(x => x.Id == category.Id);
-
-            await _productService.UpdateProduct(product);
-            return RedirectToAction("Products");
+            catch (Exception ex)
+            {
+                ViewBag.ErrorMessage = ex.Message;
+                return View("Error");
+            }
         }
     }
 }

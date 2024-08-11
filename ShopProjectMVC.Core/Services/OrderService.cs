@@ -22,5 +22,10 @@ namespace ShopProjectMVC.Core.Services
         {
             return GetOrders(userId).Skip(offset).Take(size);
         }
+
+        public async Task DeleteOrder(int id)
+        {
+            await _repository.Delete<Order>(id);
+        }
     }
 }
